@@ -12,7 +12,7 @@ At some point I might try to update this to make it a more comprehensive and in-
 Also, I gave each form Lvl 2 to make it so that you can't just breeze through CoR as soon as you get any form.
 The draws on Wis & Final are mainly to make the data Demyx fight slightly less annoying.
 The balance changes to Anti aim to make the form not completely terrible. At least this way it's good for grinding.
-This mod should be compatible with most mods, including Zurph's Valor form Magic.
+This mod should be compatible with most mods, including Zurph's Valor form Magic. If using this mod with Valor form Magic make sure this has higher priority though.
 However, due to some constraints, this mod is NOT compatible with Anti form improvements (hence the improvements of my own).
 
 Please make sure this mod is placed higher than your seed in OpenKH, otherwise it probably won't work properly.
