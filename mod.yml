@@ -1,0 +1,45 @@
+title: Form Movement ++
+originalAuthor: SapphireSapphic
+game: kh2
+description: Allows all drive forms to use more movement abilities.
+
+assets:
+
+#Patches in abilities for the forms
+- name: 00battle.bin
+  method: binarc
+  source:
+  - method: listpatch
+    name: plrp
+    source:
+    - name: PlrpList.yml
+      type: plrp
+    type: List
+
+#Load the Lua Script
+#- name: scripts/formMovement.lua
+#  method: copy
+#  source:
+#  - name: formMovement.lua
+
+#Gives the forms the neccessary animations
+- name: obj/P_EX100_BTLF.mset
+  method: copy
+  source:
+  - name: obj/P_EX100_BTLF.mset
+- name: obj/P_EX100_MAGF.mset
+  method: copy
+  source:
+  - name: obj/P_EX100_MAGF.mset
+- name: obj/P_EX100_KH1F.mset
+  method: copy
+  source:
+  - name: obj/P_EX100_KH1F.mset
+- name: obj/P_EX100_TRIF.mset
+  method: copy
+  source:
+  - name: obj/P_EX100_TRIF.mset
+- name: obj/P_EX100_ULTF.mset
+  method: copy
+  source:
+  - name: obj/P_EX100_ULTF.mset
