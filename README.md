@@ -3,8 +3,8 @@
 This mod gives:
  - Valor form Aerial Dodge & Glide
  - Wisdom form Dodge Roll, Aerial Dodge, Glide & 2x Draw
- - Limit form Quick Run, Aerial Dodge & Glide
- - Master Form Quick Run, Dodge Roll, Glide & Drive Converter
+ - Limit form High Jump, Quick Run, Aerial Dodge & Glide
+ - Master Form High Jump, Quick Run, Dodge Roll, Glide & Drive Converter
  - Final Form Quick Run, Dodge Roll, Aerial Dodge, & 2x Draw
  - Anti Form 2x Exp Boost (Removed No Experience), 2x Draw, Second Chance, Once More, 2x Jackpot, 2x Lucky Lucky
 
