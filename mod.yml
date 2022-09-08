@@ -4,18 +4,6 @@ game: kh2
 description: Allows all drive forms to use more movement abilities, and gives them various buffs.
 
 assets:
-
-#Patches in abilities for the forms
-- name: 00battle.bin
-  method: binarc
-  source:
-  - method: listpatch
-    name: plrp
-    source:
-    - name: PlrpList.yml
-      type: plrp
-    type: List
-
 #Load the Lua Script
 - name: scripts/formMovement.lua
   method: copy
