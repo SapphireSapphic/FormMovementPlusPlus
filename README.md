@@ -17,4 +17,4 @@ However, due to some constraints, this may not be compatible with Anti form impr
 Be sure that you have your Lua Backend configured to accept Lua scripts from OpenKH mods or it will not work properly.
 
 Icon by Televo https://github.com/Televo/kingdom-hearts-recollection
-Credits to Num for various offsets, as well as Shananas, Zurphing, ZakTheRobot, and TopazTK for helping me learn lua stuff./
+Credits to Num for various offsets, as well as Shananas, Zurphing, ZakTheRobot, and TopazTK for helping me learn lua stuff.
