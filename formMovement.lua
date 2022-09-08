@@ -8,16 +8,18 @@ function _OnInit()
 		ConsolePrint("Form Movement++ Lua")
 		Save = 0x09A7070 - 0x56450E
 		sora = Save + 0x24F0 + 0x0054
-		valor = Save + 0x32FE + 0x0014 -- (Anchor + Offset + First Empty Slot
+		valor = Save + 0x32FE + 0x0016 -- First Unused Slot
 		wisdom = Save + 0x3336 + 0x000E
 		limit = Save + 0x336E
 		master = Save + 0x33A6 + 0x0014
 		final = Save + 0x33DE + 0x0010
+		anti = Save + 0x340C + 0x000C --No Experience Slot
 	end
 end
 
 function _OnFrame()
 	formAbilities()
+	extraAbilities()
 end
 
 function formAbilities()
@@ -70,4 +72,22 @@ function formAbilities()
 			--ConsolePrint("Writing Glide Lvl "..Ability - 0x069)
 		end
 	end
+end
+
+function extraAbilities()
+	WriteShort(wisdom+6, 0x8195) --Draw x2
+	WriteShort(wisdom+8, 0x8195)
+	WriteShort(master+6, 0x821C) --Drive Converter
+	WriteShort(final+6, 0x8195) --Draw x2
+	WriteShort(final+8, 0x8195)
+	WriteShort(anti, 0x8191) --Exp Boost x2
+	WriteShort(anti+2, 0x8191)
+	WriteShort(anti+4, 0x8195) --Draw x2
+	WriteShort(anti+6, 0x8195)
+	WriteShort(anti+4, 0x8196) --Jackpot x2
+	WriteShort(anti+6, 0x8196)
+	WriteShort(anti+4, 0x8197) --Lucky Lucky x2
+	WriteShort(anti+6, 0x8197)
+	WriteShort(anti+8, 0x819F) --Second Chance
+	WriteShort(anti+10, 0x81A0) --Once More
 end
