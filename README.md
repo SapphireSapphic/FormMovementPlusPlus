@@ -8,6 +8,8 @@ This mod gives:
  - Final Form Quick Run, Dodge Roll, Aerial Dodge, & 2x Draw
  - Anti Form 2x Exp Boost (Removed No Experience), 2x Draw, Second Chance, Once More, 2x Jackpot, 2x Lucky Lucky
 
+!! If using this mod with emulator, make sure you either copy the lua script to your Documents/PXSC2/scripts/ folder, or that your PCSX2 is configured to find lua scripts from your OpenKH folder !!
+
 The Level of the extra growth abilities will scale with the growth abilities on Base Sora.
 The draws on Wis & Final are mainly to make the data Demyx fight slightly less annoying.
 The balance changes to Anti aim to make the form not completely terrible. At least this way it's good for grinding.
