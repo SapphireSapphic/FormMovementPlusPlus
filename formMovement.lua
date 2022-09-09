@@ -3,18 +3,22 @@ LUAGUI_AUTH = "SapphireSapphic"
 LUAGUI_DESC = "Script to handle progressive growth abilities for drive forms. Credits to Num, for various offsets & code taken from GoA ROM Lua."
 
 function _OnInit()
-	if GAME_ID == 0x431219CC and ENGINE_TYPE == "BACKEND" then
+	if (GAME_ID == 0xF266B00B or GAME_ID == 0xFAF99301) and ENGINE_TYPE == "ENGINE" then --PCSX2
+		canExecute=true
+		ConsolePrint("Form Movement++ Lua")
+		Save = 0x032BB30 --Save File
+	elseif GAME_ID == 0x431219CC and ENGINE_TYPE == "BACKEND" then
 		canExecute=true
 		ConsolePrint("Form Movement++ Lua")
 		Save = 0x09A7070 - 0x56450E
-		sora = Save + 0x24F0 + 0x0054
-		valor = Save + 0x32FE + 0x0016 -- First Unused Slot
-		wisdom = Save + 0x3336 + 0x000E
-		limit = Save + 0x336E
-		master = Save + 0x33A6 + 0x0014
-		final = Save + 0x33DE + 0x0010
-		anti = Save + 0x340C + 0x000C --No Experience Slot
 	end
+	sora = Save + 0x24F0 + 0x0054
+	valor = Save + 0x32FE + 0x0016 -- First Unused Slot
+	wisdom = Save + 0x3336 + 0x000E
+	limit = Save + 0x336E
+	master = Save + 0x33A6 + 0x0014
+	final = Save + 0x33DE + 0x0010
+	anti = Save + 0x340C + 0x000C --No Experience Slot
 end
 
 function _OnFrame()
