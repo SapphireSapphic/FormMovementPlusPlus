@@ -1,7 +1,7 @@
 title: Form Movement ++
 originalAuthor: SapphireSapphic
 game: kh2
-description: Allows all drive forms to use more movement abilities, and gives them various buffs.
+description: Allows all drive forms to use more movement abilities, and gives them various buffs. !! If using this mod with emulator, make sure you either copy the lua script to your Documents/PXSC2/scripts/ folder, or that your PCSX2 is configured to find lua scripts from your OpenKH folder!!
 
 assets:
 #Load the Lua Script
