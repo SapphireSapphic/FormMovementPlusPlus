@@ -87,10 +87,10 @@ function extraAbilities()
 	WriteShort(anti+2, 0x8191)
 	WriteShort(anti+4, 0x8195) --Draw x2
 	WriteShort(anti+6, 0x8195)
-	WriteShort(anti+4, 0x8196) --Jackpot x2
-	WriteShort(anti+6, 0x8196)
-	WriteShort(anti+4, 0x8197) --Lucky Lucky x2
-	WriteShort(anti+6, 0x8197)
-	WriteShort(anti+8, 0x819F) --Second Chance
-	WriteShort(anti+10, 0x81A0) --Once More
+	WriteShort(anti+8, 0x8196) --Jackpot x2
+	WriteShort(anti+10, 0x8196)
+	WriteShort(anti+12, 0x8197) --Lucky Lucky x2
+	WriteShort(anti+14, 0x8197)
+	WriteShort(anti+16, 0x819F) --Second Chance
+	WriteShort(anti+18, 0x81A0) --Once More
 end
