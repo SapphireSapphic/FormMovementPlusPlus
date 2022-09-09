@@ -5,7 +5,7 @@ description: Allows all drive forms to use more movement abilities, and gives th
 
 assets:
 #Load the Lua Script
-- name: scripts/formMovement.lua
+- name: scripts/F266B00B formMovement.lua
   method: copy
   source:
   - name: formMovement.lua
