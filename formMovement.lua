@@ -3,7 +3,11 @@ LUAGUI_AUTH = "SapphireSapphic"
 LUAGUI_DESC = "Script to handle progressive growth abilities for drive forms. Credits to Num, for various offsets & code taken from GoA ROM Lua."
 
 function _OnInit()
-	if GAME_ID == 0x431219CC and ENGINE_TYPE == "BACKEND" then
+	if (GAME_ID == 0xF266B00B or GAME_ID == 0xFAF99301) and ENGINE_TYPE == "ENGINE" then --PCSX2
+		canExecute=true
+		ConsolePrint("Form Movement++ PCSX2 Ver")
+		Save = 0x032BB30 --Save File
+	elseif GAME_ID == 0x431219CC and ENGINE_TYPE == "BACKEND" then
 		canExecute=true
 		ConsolePrint("Form Movement++ Lua")
 		Save = 0x09A7070 - 0x56450E
@@ -36,22 +40,18 @@ function formAbilities()
 			WriteShort(limit+2,Ability + 0x8000)
 			WriteShort(master+2,Ability + 0x8000)
 			WriteShort(final,Ability + 0x8000)
-			--ConsolePrint("Writing Quick Run "..Ability - 0x061)
 		elseif Ability >= 0x8062 and Ability <= 0x8065 then --Quick Run Eq
 			WriteShort(limit+2,Ability)
 			WriteShort(master+2,Ability)
 			WriteShort(final,Ability)
-			--ConsolePrint("Writing Quick Run "..Ability - 0x061)
 		elseif Ability >= 0x234 and Ability <= 0x237 then --Dodge Roll
 			WriteShort(wisdom,Ability + 0x8000)
 			WriteShort(master+4,Ability + 0x8000)
 			WriteShort(final+2,Ability + 0x8000)
-			--ConsolePrint("Writing Dodge Roll "..Ability - 0x233)
 		elseif Ability >= 0x8234 and Ability <= 0x8237 then --Dodge Roll Eq
 			WriteShort(wisdom,Ability)
 			WriteShort(master+4,Ability)
 			WriteShort(final+2,Ability)
-			--ConsolePrint("Writing Dodge Roll "..Ability - 0x233)
 		elseif Ability >= 0x066 and Ability <= 0x069 then --Aerial Dodge
 			WriteShort(valor,Ability + 0x8000)
 			WriteShort(wisdom+2,Ability + 0x8000)
@@ -63,19 +63,16 @@ function formAbilities()
 			WriteShort(wisdom+2,Ability)
 			WriteShort(limit+4,Ability)
 			WriteShort(final+4,Ability)
-			--ConsolePrint("Writing Aerial Dodge "..Ability - 0x065)
 		elseif Ability >= 0x06A and Ability <= 0x06D then --Glide
 			WriteShort(valor+2,Ability + 0x8000)
 			WriteShort(wisdom+4,Ability + 0x8000)
 			WriteShort(limit+6,Ability + 0x8000)
 			WriteShort(master+6,Ability + 0x8000)
-			--ConsolePrint("Writing Glide Lvl "..Ability - 0x069)
 		elseif Ability >= 0x806A and Ability <= 0x806D then --Glide Eq
 			WriteShort(valor+2,Ability)
 			WriteShort(wisdom+4,Ability)
 			WriteShort(limit+6,Ability)
 			WriteShort(master+6,Ability)
-			--ConsolePrint("Writing Glide Lvl "..Ability - 0x069)
 		end
 	end
 end
