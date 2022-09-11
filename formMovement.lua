@@ -13,7 +13,7 @@ function _OnInit()
 		Save = 0x09A7070 - 0x56450E
 	end
 	sora = Save + 0x24F0 + 0x0054
-	valor = Save + 0x32FE + 0x0018 -- First Unused Slot
+	valor = Save + 0x32FE + 0x0016 -- First Unused Slot
 	wisdom = Save + 0x3336 + 0x000E
 	limit = Save + 0x336E
 	master = Save + 0x33A6 + 0x0014
