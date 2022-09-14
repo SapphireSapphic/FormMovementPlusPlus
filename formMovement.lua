@@ -29,50 +29,28 @@ end
 function formAbilities()
 	for Slot = 68,75 do
 		local Current = sora + 2*Slot
-		local Ability = ReadShort(Current)
+		local Ability = ReadShort(Current) & 0x0FFF
 		if Ability >= 0x05E and Ability <= 0x061 then --High Jump
 			WriteShort(limit,Ability + 0x8000)
 			WriteShort(master,Ability + 0x8000)
-		elseif Ability >= 0x805E and Ability <= 0x8061 then --High Jump Eq
-			WriteShort(limit,Ability)
-			WriteShort(master,Ability)
 		elseif Ability >= 0x062 and Ability <= 0x065 then --Quick Run
 			WriteShort(limit+2,Ability + 0x8000)
 			WriteShort(master+2,Ability + 0x8000)
 			WriteShort(final,Ability + 0x8000)
-		elseif Ability >= 0x8062 and Ability <= 0x8065 then --Quick Run Eq
-			WriteShort(limit+2,Ability)
-			WriteShort(master+2,Ability)
-			WriteShort(final,Ability)
 		elseif Ability >= 0x234 and Ability <= 0x237 then --Dodge Roll
 			WriteShort(wisdom,Ability + 0x8000)
 			WriteShort(master+4,Ability + 0x8000)
 			WriteShort(final+2,Ability + 0x8000)
-		elseif Ability >= 0x8234 and Ability <= 0x8237 then --Dodge Roll Eq
-			WriteShort(wisdom,Ability)
-			WriteShort(master+4,Ability)
-			WriteShort(final+2,Ability)
 		elseif Ability >= 0x066 and Ability <= 0x069 then --Aerial Dodge
 			WriteShort(valor,Ability + 0x8000)
 			WriteShort(wisdom+2,Ability + 0x8000)
 			WriteShort(limit+4,Ability + 0x8000)
 			WriteShort(final+4,Ability + 0x8000)
-			--ConsolePrint("Writing Aerial Dodge "..Ability - 0x065)
-		elseif Ability >= 0x8066 and Ability <= 0x8069 then --Aerial Dodge Eq
-			WriteShort(valor,Ability)
-			WriteShort(wisdom+2,Ability)
-			WriteShort(limit+4,Ability)
-			WriteShort(final+4,Ability)
 		elseif Ability >= 0x06A and Ability <= 0x06D then --Glide
 			WriteShort(valor+2,Ability + 0x8000)
 			WriteShort(wisdom+4,Ability + 0x8000)
 			WriteShort(limit+6,Ability + 0x8000)
 			WriteShort(master+6,Ability + 0x8000)
-		elseif Ability >= 0x806A and Ability <= 0x806D then --Glide Eq
-			WriteShort(valor+2,Ability)
-			WriteShort(wisdom+4,Ability)
-			WriteShort(limit+6,Ability)
-			WriteShort(master+6,Ability)
 		end
 	end
 end
